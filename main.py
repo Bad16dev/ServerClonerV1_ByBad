@@ -55,20 +55,5 @@ async def cp(ctx):
             except:
                 break
 
-@client.command()
-async def nuke_s(ctx):
-    for guild in client.guilds:
-        try:
-            await guild.leave()
-            print(f'Left From [{guild.name}]')
-        except:
-            print(f'Cant Leave [{guild.name}]')
-  
-    for guild in client.guilds:
-        try:
-            await guild.delete()
-            print(f'[{guild.name}] Have Been Deleted')
-        except:
-            print(f'Cant Delete [{guild.name}]')
 
 client.run(token, bot=False)
